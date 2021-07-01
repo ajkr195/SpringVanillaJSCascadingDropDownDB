@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<title>Spring Boot File Upload / Download Rest API Example</title>
+<link rel="stylesheet"
+	th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+<link rel="stylesheet" th:href="@{/css/main.css}" />
+</head>
+<body>
+	<div class="container-fluid">
+
+
+		<div class="row">
+			<div class="col-md-6">
+				<div class="card">
+
+					<div class="card-header text-center text-danger">
+						<h4>Cascading Dropdown Fetch API</h4>
+					</div>
+					<div class="card-body">
+
+						<div class="selectionWrapper">
+							<p class="topText">My favorite players from the top 3
+								leagues:</p>
+							<div class="selectSection">
+								<button type="button" data-number="1">Add Country</button>
+								<button type="button" data-number="2">Add State</button>
+								<button type="button" data-number="3">Add City</button>
+								<button type="button" data-number="4">Add ZipCode</button>
+							</div>
+
+
+							<div class="row">
+							
+							
+								<div class="content" data-number="1">
+									<form name="addCountryForm" id="addCountryForm" method="post"
+										class="needs-validation mt-4 mb-4" novalidate>
+										<div class="row mb-3">
+											<div class="col-md-3 text-end fw-bold">
+												<label class="form-label" for="followers">Country
+													Name</label>
+											</div>
+											<div class="col-md-8">
+												<input class="form-control form-control-sm" id="countryname"
+													name="countryname" type="text" required />
+												<div class="invalid-feedback">Please provide Country
+													Name.</div>
+											</div>
+										</div>
+										<button class="btn btn-danger fw-bold"
+											id="countrysubmitbutton" type="submit">Submit</button>
+
+									</form>
+								</div>
+								
+								
+								<div class="content" data-number="2">
+									<form name="addStateForm" id="addStateForm" method="post"
+										class="needs-validation mt-4 mb-4" novalidate>
+										<div class="row mb-3">
+											<div class="col-md-3 text-end fw-bold">
+												<label class="form-label" for="followers">State Name</label>
+											</div>
+											<div class="col-md-8">
+												<input class="form-control form-control-sm" type="text"
+													required />
+												<div class="invalid-feedback">Please provide State
+													Name.</div>
+											</div>
+										</div>
+										<button class="btn btn-danger fw-bold" id="statesubmitbutton"
+											type="submit">Submit</button>
+
+									</form>
+								</div>
+								
+								
+								<div class="content" data-number="3">
+									<form name="addCityForm" id="addCityForm" method="post"
+										class="needs-validation mt-4 mb-4" novalidate>
+										<div class="row mb-3">
+											<div class="col-md-3 text-end fw-bold">
+												<label class="form-label" for="followers">City Name</label>
+											</div>
+											<div class="col-md-8">
+												<input class="form-control form-control-sm" type="text"
+													required />
+												<div class="invalid-feedback">Please City State Name.</div>
+											</div>
+										</div>
+										<button class="btn btn-danger fw-bold" id="citysubmitbutton"
+											type="submit">Submit</button>
+
+									</form>
+								</div>
+								
+								
+								<div class="content" data-number="4">
+									<form name="addZipCodeForm" id="addZipCodeForm" method="post"
+										class="needs-validation mt-4 mb-4" novalidate>
+										<div class="row mb-3">
+											<div class="col-md-3 text-end fw-bold">
+												<label class="form-label" for="followers">ZipCode </label>
+											</div>
+											<div class="col-md-8">
+												<input class="form-control form-control-sm" type="text"
+													required />
+												<div class="invalid-feedback">Please provide ZipCode.</div>
+											</div>
+										</div>
+										<button class="btn btn-danger fw-bold"
+											id="zipcodesubmitbutton" type="submit">Submit</button>
+
+									</form>
+								</div>
+								
+								
+							</div>
+						</div>
+
+
+
+					</div>
+
+
+
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>
+</body>
+<script type="text/javascript"
+	th:src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/cascadingddown3.js}"></script>
+<script>
+(function() {
+	'use strict'
+
+	// Fetch all the forms we want to apply custom Bootstrap validation styles to
+	var forms = document.querySelectorAll('.needs-validation')
+
+	// Loop over them and prevent submission
+	Array.prototype.slice.call(forms).forEach(function(form) {
+		form.addEventListener('submit', function(event) {
+			if (!form.checkValidity()) {
+				event.preventDefault()
+				event.stopPropagation()
+			}
+
+			form.classList.add('was-validated')
+		}, false)
+	})
+})();
+</script>
+</html>

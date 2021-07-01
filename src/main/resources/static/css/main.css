@@ -1,0 +1,131 @@
+body {
+	padding-top: 80px;
+	padding-left: 80px;
+	padding-right: 80px;
+	padding-bottom: 80px;
+	background-color: #0cbaba;
+	background-image: linear-gradient(315deg, #003399 0%, #380036 100%);
+}
+
+.card {
+	border-radius: 40px;
+	padding-left: 80px;
+	padding-right: 80px;
+	padding-bottom: 40px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 80px;
+}
+
+.card-header {
+	border-bottom: none;
+	background: transparent;
+}
+
+.selectBox {
+	border-radius: 20px;
+}
+
+.centeritem {
+	align-content: center;
+}
+
+.hidden {
+	display: none;
+}
+
+.nothidden {
+	display: block;
+}
+
+.formItemHeading {
+	cursor: pointer;
+	margin: 0px 0px 10px 0px;
+	padding: 10px;
+	background: #E9967A;
+	color: #fff;
+	width: 100%;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	box-sizing: border-box;
+}
+
+.close .formItemContent {
+	height: 0px;
+	transition: height 1s ease-out;
+	-webkit-transform: scaleY(0);
+	-o-transform: scaleY(0);
+	-ms-transform: scaleY(0);
+	transform: scaleY(0);
+	float: left;
+	display: block;
+}
+
+.open .formItemContent {
+	padding: 20px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	width: 100%;
+	margin: 0px 0px 10px 0px;
+	display: block;
+	-webkit-transform: scaleY(1);
+	-o-transform: scaleY(1);
+	-ms-transform: scaleY(1);
+	transform: scaleY(1);
+	-webkit-transform-origin: top;
+	-o-transform-origin: top;
+	-ms-transform-origin: top;
+	transform-origin: top;
+	-webkit-transition: -webkit-transform 0.4s ease-out;
+	-o-transition: -o-transform 0.4s ease;
+	-ms-transition: -ms-transform 0.4s ease;
+	transition: transform 0.4s ease;
+	box-sizing: border-box;
+}
+
+.open .formItemHeading {
+	margin: 0px;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	-webkit-border-bottom-right-radius: 0px;
+	-webkit-border-bottom-left-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	background-color: #dc3545;
+	color: #ffff;
+}
+
+.box {
+	width: 50px;
+	height: 50px;
+	border: 1px solid black;
+	text-align: center;
+	font-family: verdana;
+	font-size: 0.875rem;
+	padding: 4px;
+}
+
+.boxwrapper {
+	display: flex;
+	margin: 8px;
+}
+
+.boxwrapper>DIV {
+	margin: 4px;
+}
+
+.hidden {
+	display: none
+}
+
+/* .content:not(:first-child) { */
+.content {
+	display: none;
+}
